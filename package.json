@@ -12,7 +12,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "vitest --globlas"
+    "test": "test"
   },
   "repository": {
     "type": "git",
@@ -30,9 +30,6 @@
   "bugs": {
     "url": "https://github.com/mongodb-model/cli/issues"
   },
-  "homepage": "https://github.com/mongodb-model/cli#readme",
-  "dependencies": {
-    "dotenv": "16.0.3",
-    "vitest": "0.25.1"
-  }
+  "homepage": "https://github.com/mongodb-model/cli#readme"
+ 
 }
