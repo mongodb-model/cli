@@ -1,6 +1,6 @@
 # CLI
 
-Cli helps in building CLIs and styling terminals. Cli is a duplex stream, specifically a Transform stream with some functionalities added. Primarily it uses full power of the NodeJs Transform Stream API. In other words, everything you can do with NodeJs Transform API you can do with base! Cli is centrally very highly event driven. It's command use is by extension.
+Cli helps in building CLIs and styling terminals. If you are not building a cli application, then you most likely do not need it. Cli is a duplex stream, specifically a Transform stream with some functionalities added. Primarily, it uses full power of the NodeJs Transform Stream API. In other words, everything you can do with NodeJs Transform API you can do with cli! Cli is centrally very highly event driven. Its common use is by extension or by using object destruction to get the instance methods needed.
 
 ### Installation
 
@@ -21,8 +21,8 @@ $ npm i @mongodb-model/cli
 
 #### Making api request (http request)
 ```javascript
- const CLI = require('@mongodb-model/cli');
- const cli = new CLI();
+const CLI = require('@mongodb-model/cli');
+const cli = new CLI();
 cli.apiGet(); //base.apiGet(your api endpoint)
 cli.on('apiGet', data => console.log(data));
 cli.on('apiGet-error', error => console.error(error));
@@ -32,7 +32,7 @@ cli.on('apiGet-error', error => console.error(error));
 #### By extension
 
 ```javascript
- class MyWonderfulClass extends require('@mongodb-model/cli') {
+class MyWonderfulClass extends require('@mongodb-model/cli') {
 
     constructor(...arrayOfObjects) {
 
@@ -48,16 +48,16 @@ cli.on('apiGet-error', error => console.error(error));
     this.autoinvoker(MyWonderfulClass);
     this.setMaxListeners(Infinity);
   }
- };
+};
 
 ```
 
-#### Cli methods usage example
+#### cli methods usage example
 ```javascript
 
 const CLI = require('@mongodb-model/cli');
 
-// use object destruction to get methods needed from the instance.
+// You may use object destruction to get methods needed from the instance.
 const { centered, description,verticalSpace,texAligner} = new CLI
 
 // example man page commands with their definitions
