@@ -1,6 +1,6 @@
 {
   "name": "@mongodb-model/cli",
-  "version": "0.0.10000",
+  "version": "0.0.100001",
   "description": "cli",
   "main": "index.js",
   "bin": {
