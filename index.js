@@ -475,39 +475,3 @@ class CLI extends require("../base") {
 
 module.exports =  CLI;
 
-const { centered, description,verticalSpace,texAligner} = new CLI
-
-const manCommand = () => ({
-  man: "Example App Command Line Interface (CLI) Manual",
-  help: 'Alias of the "man" command',
-  methods: "List all methods on Example App",
-  events: "Events emitted by Example App",
-})
-const man = () => {
-  console.clear();
-  const docs = `\x1b[36mNAME\x1b[0m
-\x1b[36mman\x1b[0m - Example App Command Line Interface (CLI) Manual 
-
-\x1b[36mSYPNOSIS\x1b[0m
-\x1b[36mman\x1b[0m [\x1b[36mman\x1b[0m|\x1b[36mhelp\x1b[0m|\x1b[36mmethods\x1b[0m|\x1b[36mevent\x1b[0m|\x1b[36mclass\x1b[0m] 
-
-\x1b[36mDESCRIPTION\x1b[0m
-Example App Command Line Interface (CLI) Manual.
-`;
-
-  centered(`\x1b[32mEXAMPLE APP COMMAND LINE INTERFACE AND USAGE MANUAL\x1b[0m`);
-  description(docs);
-  verticalSpace(2);
-
-  const options = {
-    pad: 22,
-    position: process.stdout.columns,
-    hline: false,
-    keyColor: "36",
-    valueColor: "37",
-  };
-  texAligner(options, manCommand());
-  console.log();
-}
-
-man()
